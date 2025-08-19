@@ -2,21 +2,25 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title="bugdill socer" description={SITE_DESCRIPTION} />
+		<BaseHead title="bugdill socer" description="School soccer season scoreboard" />
 		<style>
+			.title {
+				text-align: center;
+				font-size: 3rem;
+				font-weight: bold;
+				margin-top: 2rem;
+			}
 			.scoreboard {
 				display: flex;
 				justify-content: center;
-				align-items: center;
-				gap: 2rem;
-				font-size: 2rem;
-				font-weight: bold;
+				align-items: flex-start;
+				gap: 3rem;
+				font-size: 1.2rem;
 				margin: 2rem 0;
 			}
 			.team {
@@ -24,12 +28,15 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				border: 2px solid #333;
 				border-radius: 12px;
 				text-align: center;
+				min-width: 200px;
 			}
-			.title {
-				text-align: center;
-				font-size: 3rem;
-				font-weight: bold;
-				margin-top: 2rem;
+			.teammates {
+				margin-top: 1rem;
+				text-align: left;
+			}
+			.teammates li {
+				list-style: none;
+				padding: 0.2rem 0;
 			}
 		</style>
 	</head>
@@ -40,18 +47,33 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 			<div class="scoreboard">
 				<div class="team">
-					<div>Team Red</div>
+					<div><strong>Team Red</strong></div>
 					<div>Score: 0</div>
+					<ul class="teammates">
+						<li>Player 1</li>
+						<li>Player 2</li>
+						<li>Player 3</li>
+						<li>Player 4</li>
+						<li>Player 5</li>
+					</ul>
 				</div>
+
 				<div class="team">
-					<div>Team Blue</div>
+					<div><strong>Team Blue</strong></div>
 					<div>Score: 0</div>
+					<ul class="teammates">
+						<li>Player A</li>
+						<li>Player B</li>
+						<li>Player C</li>
+						<li>Player D</li>
+						<li>Player E</li>
+					</ul>
 				</div>
 			</div>
 
 			<p style="text-align:center;">
-				Welcome to the official Bugdill Socer scoreboard.  
-				Customize team names and scores in <code>src/pages/index.astro</code>.
+				Welcome to the Bugdill Socer scoreboard. Update player names and scores in
+				<code>src/pages/index.astro</code>.
 			</p>
 		</main>
 		<Footer />
