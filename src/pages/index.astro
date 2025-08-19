@@ -9,33 +9,84 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin:0;
+        padding:0;
+        background:#f0f8f5;
+        color:#333;
+      }
+      main {
+        padding:2rem;
+        max-width:1000px;
+        margin:auto;
+      }
+      h1 {
+        color:#006400;
+        text-align:center;
+        margin-bottom:1rem;
+      }
+      .team-grid {
+        display:grid;
+        grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));
+        gap:1.5rem;
+        margin-top:1rem;
+      }
+      .player-card {
+        background:white;
+        padding:1rem;
+        border-radius:12px;
+        box-shadow:0 4px 6px rgba(0,0,0,0.1);
+        text-align:center;
+        transition:transform 0.2s;
+      }
+      .player-card:hover {
+        transform:scale(1.05);
+      }
+      .player-card img {
+        width:80px;
+        height:80px;
+        border-radius:50%;
+        margin-bottom:0.5rem;
+      }
+    </style>
   </head>
   <body>
     <Header />
-    <main style="padding:2rem; max-width:800px; margin:auto;">
+    <main>
       <h1>🏟️ Welcome to Bugdill Soccer!</h1>
-      <p>
-        The new school year is here, and that means soccer season is kicking off!  
-        Get ready for practice, teamwork, and matches that bring our community together.
+      <p style="text-align:center; font-size:1.2rem;">
+        A new season begins — teamwork, practice, and matches are waiting for us. Let's play with passion!
       </p>
 
-      <h2>⚽ Our Team</h2>
-      <ul>
-        <li>Player 1</li>
-        <li>Player 2</li>
-        <li>Player 3</li>
-        <li>Player 4</li>
-        <li>Player 5</li>
-        <li>Player 6</li>
-        <li>Player 7</li>
-        <li>Player 8</li>
-        <li>Player 9</li>
-        <li>Player 10</li>
-        <li>Player 11</li>
-      </ul>
+      <h2 style="margin-top:2rem; text-align:center;">⚽ Our Team</h2>
+      <div class="team-grid">
+        <div class="player-card">
+          <img src="https://via.placeholder.com/80" alt="Player 1"/>
+          <h3>Player 1</h3>
+          <p>Forward</p>
+        </div>
+        <div class="player-card">
+          <img src="https://via.placeholder.com/80" alt="Player 2"/>
+          <h3>Player 2</h3>
+          <p>Midfielder</p>
+        </div>
+        <div class="player-card">
+          <img src="https://via.placeholder.com/80" alt="Player 3"/>
+          <h3>Player 3</h3>
+          <p>Defender</p>
+        </div>
+        <div class="player-card">
+          <img src="https://via.placeholder.com/80" alt="Player 4"/>
+          <h3>Player 4</h3>
+          <p>Goalkeeper</p>
+        </div>
+        <!-- Add more teammates here -->
+      </div>
 
-      <h2>📅 Upcoming Events</h2>
-      <p>Stay tuned for training schedules and match dates.</p>
+      <h2 style="margin-top:2rem; text-align:center;">📅 Upcoming Events</h2>
+      <p style="text-align:center;">Stay tuned for training schedules and match dates.</p>
     </main>
     <Footer />
   </body>
