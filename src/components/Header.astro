@@ -1,42 +1,9 @@
----
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
----
-
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <Header />
-    <main style="padding:2rem; max-width:800px; margin:auto;">
-      <h1>🏟️ Welcome to Bugdill Soccer!</h1>
-      <p>
-        The new school year is here, and that means soccer season is kicking off!  
-        Get ready for practice, teamwork, and matches that bring our community together.
-      </p>
-
-      <h2>⚽ Our Team</h2>
-      <ul>
-        <li>Player 1</li>
-        <li>Player 2</li>
-        <li>Player 3</li>
-        <li>Player 4</li>
-        <li>Player 5</li>
-        <li>Player 6</li>
-        <li>Player 7</li>
-        <li>Player 8</li>
-        <li>Player 9</li>
-        <li>Player 10</li>
-        <li>Player 11</li>
-      </ul>
-
-      <h2>📅 Upcoming Events</h2>
-      <p>Stay tuned for training schedules and match dates.</p>
-    </main>
-    <Footer />
-  </body>
-</html>
+<header style="background:#008000; padding:1rem; color:white; text-align:center;">
+  <h2>⚽ Bugdill Soccer</h2>
+  <nav>
+    <a href="/" style="color:white; margin:0 1rem;">Home</a>
+    <a href="/about" style="color:white; margin:0 1rem;">About</a>
+    <a href="/team" style="color:white; margin:0 1rem;">Team</a>
+    <a href="/contact" style="color:white; margin:0 1rem;">Contact</a>
+  </nav>
+</header>
