@@ -8,41 +8,50 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead title="bugdill socer" description={SITE_DESCRIPTION} />
+		<style>
+			.scoreboard {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 2rem;
+				font-size: 2rem;
+				font-weight: bold;
+				margin: 2rem 0;
+			}
+			.team {
+				padding: 1rem 2rem;
+				border: 2px solid #333;
+				border-radius: 12px;
+				text-align: center;
+			}
+			.title {
+				text-align: center;
+				font-size: 3rem;
+				font-weight: bold;
+				margin-top: 2rem;
+			}
+		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
+			<h1 class="title">⚽ bugdill socer ⚽</h1>
+
+			<div class="scoreboard">
+				<div class="team">
+					<div>Team Red</div>
+					<div>Score: 0</div>
+				</div>
+				<div class="team">
+					<div>Team Blue</div>
+					<div>Score: 0</div>
+				</div>
+			</div>
+
+			<p style="text-align:center;">
+				Welcome to the official Bugdill Socer scoreboard.  
+				Customize team names and scores in <code>src/pages/index.astro</code>.
 			</p>
 		</main>
 		<Footer />
