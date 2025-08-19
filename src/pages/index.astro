@@ -2,80 +2,41 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title="bugdill socer" description="School soccer season scoreboard" />
-		<style>
-			.title {
-				text-align: center;
-				font-size: 3rem;
-				font-weight: bold;
-				margin-top: 2rem;
-			}
-			.scoreboard {
-				display: flex;
-				justify-content: center;
-				align-items: flex-start;
-				gap: 3rem;
-				font-size: 1.2rem;
-				margin: 2rem 0;
-			}
-			.team {
-				padding: 1rem 2rem;
-				border: 2px solid #333;
-				border-radius: 12px;
-				text-align: center;
-				min-width: 200px;
-			}
-			.teammates {
-				margin-top: 1rem;
-				text-align: left;
-			}
-			.teammates li {
-				list-style: none;
-				padding: 0.2rem 0;
-			}
-		</style>
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1 class="title">⚽ bigdill socer ⚽</h1>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main style="padding:2rem; max-width:800px; margin:auto;">
+      <h1>🏟️ Welcome to Bugdill Soccer!</h1>
+      <p>
+        The new school year is here, and that means soccer season is kicking off!  
+        Get ready for practice, teamwork, and matches that bring our community together.
+      </p>
 
-			<div class="scoreboard">
-				<div class="team">
-					<div><strong>Team Red</strong></div>
-					<div>Score: 0</div>
-					<ul class="teammates">
-						<li>Player 1</li>
-						<li>Player 2</li>
-						<li>Player 3</li>
-						<li>Player 4</li>
-						<li>Player 5</li>
-					</ul>
-				</div>
+      <h2>⚽ Our Team</h2>
+      <ul>
+        <li>Player 1</li>
+        <li>Player 2</li>
+        <li>Player 3</li>
+        <li>Player 4</li>
+        <li>Player 5</li>
+        <li>Player 6</li>
+        <li>Player 7</li>
+        <li>Player 8</li>
+        <li>Player 9</li>
+        <li>Player 10</li>
+        <li>Player 11</li>
+      </ul>
 
-				<div class="team">
-					<div><strong>Team Blue</strong></div>
-					<div>Score: 0</div>
-					<ul class="teammates">
-						<li>Player A</li>
-						<li>Player B</li>
-						<li>Player C</li>
-						<li>Player D</li>
-						<li>Player E</li>
-					</ul>
-				</div>
-			</div>
-
-			<p style="text-align:center;">
-				Welcome to the Bugdill Socer scoreboard. Update player names and scores in
-				<code>src/pages/index.astro</code>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+      <h2>📅 Upcoming Events</h2>
+      <p>Stay tuned for training schedules and match dates.</p>
+    </main>
+    <Footer />
+  </body>
 </html>
